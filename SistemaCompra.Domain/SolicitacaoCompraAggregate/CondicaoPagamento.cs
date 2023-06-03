@@ -15,7 +15,6 @@ namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
         {
             if (totalGeral > 5000)
                 condicao = 30;
-
             if (!_valoresPossiveis.Contains(condicao)) throw new BusinessRuleException("Condição de pagamento deve ser " +_valoresPossiveis.ToString());
 
             Valor = condicao;
